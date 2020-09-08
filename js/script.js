@@ -28,7 +28,7 @@ $(".slider").slick({
       breakpoint: 950,
       settings: {
         arrows: false,
-        centerMode: true,
+        centerMode: false,
         slidesToShow: 2,
         centerPadding: "100px",
       },
