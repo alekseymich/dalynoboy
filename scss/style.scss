@@ -34,6 +34,11 @@
   &-flex {
     display: flex;
   }
+  &-slider {
+    @media screen and (max-width: 1200px) {
+      width: 99%;
+    }
+  }
 }
 
 .header {
@@ -272,13 +277,18 @@
   &__form {
     display: block;
     padding-bottom: 33px;
+    position: relative;
+  }
+  &__item {
+    display: inline;
+    position: relative;
   }
   &__input {
     position: relative;
     width: 281px;
     border: 1px solid #a7a7a7;
     border-radius: 4px;
-    padding: 23px 0 23px 22px;
+    padding: 23px 0 23px 42px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -289,6 +299,35 @@
       margin-right: 10px;
       margin-bottom: 10px;
     }
+  }
+  &__map {
+    fill: #8a8a8a;
+    position: absolute;
+    top: -5px;
+    width: 28px;
+    &-froom {
+      left: 20px;
+    }
+    &-where {
+      z-index: 75;
+      left: 23px;
+    }
+  }
+
+  &__telephone {
+    color: #8a8a8a;
+    position: absolute;
+    top: -3px;
+    left: 21px;
+  }
+  .calculation__input:focus ~ .calculation__map-froom > svg > g {
+    fill: red;
+  }
+  .calculation__input:focus ~ .calculation__map-where > svg > g {
+    fill: red;
+  }
+  .calculation__input:focus ~ .calculation__telephone > svg {
+    color: red;
   }
 
   &__submit {
@@ -625,6 +664,9 @@
   background-color: #dc1344;
   z-index: 350;
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.34);
+  @media screen and (max-width: 1200px) {
+    left: 10px;
+  }
 }
 
 .slick-arrow.slick-next {
@@ -637,7 +679,7 @@
   z-index: 350;
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.34);
   @media screen and (max-width: 1200px) {
-    right: -20px;
+    right: 10px;
   }
 }
 
